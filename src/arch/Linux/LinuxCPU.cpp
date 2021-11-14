@@ -14,6 +14,7 @@ LinuxCPU::LinuxCPU() {
     std::ifstream fs("/proc/cpuinfo");
     std::string line;
     auto &cpu = getCpu();
+
     while(std::getline(fs, line)){
         if(line.compare(0, 10, "model name") == 0){
 
@@ -27,9 +28,6 @@ LinuxCPU::LinuxCPU() {
 
     update();
 }
-
-
-
 
 void LinuxCPU::update() {
     std::vector<CoreData> before, after;
