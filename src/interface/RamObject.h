@@ -16,12 +16,12 @@ public:
     unsigned long getUsage();
 
 protected:
-    void setFree(unsigned long _free);
+    void setUsage(unsigned long _usage);
     void setTotal(unsigned long _total);
 
 private:
     unsigned long total;
-    unsigned long free;
+    unsigned long used;
 
 
 
