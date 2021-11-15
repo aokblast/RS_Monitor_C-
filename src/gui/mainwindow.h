@@ -7,6 +7,7 @@
 
 #include <QWidget>
 #include "cpudisplay.h"
+#include "ramdisplay.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -23,6 +24,7 @@ public:
 private:
     Ui::MainWindow *ui;
     CPUDisplay *cpuD;
+    RamDisplay *ramD;
 };
 
 
