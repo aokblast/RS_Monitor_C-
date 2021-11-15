@@ -27,4 +27,5 @@ private:
 };
 
 
+
 #endif //RS_MONITOR_LINUXCPU_H

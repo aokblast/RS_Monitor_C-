@@ -6,14 +6,17 @@
 
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <iostream>
 
 
 MainWindow::MainWindow(QWidget *parent) :
-        QWidget(parent), ui(new Ui::MainWindow) {
+        QWidget(parent), ui(new Ui::MainWindow), cpuD(new CPUDisplay(this)) {
     ui->setupUi(this);
+    ui->cpuFrame->setLayout(cpuD->getLayout());
+
 }
 
 MainWindow::~MainWindow() {
+    delete cpuD;
     delete ui;
 }
-

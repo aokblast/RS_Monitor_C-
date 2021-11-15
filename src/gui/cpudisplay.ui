@@ -3,8 +3,8 @@
     <author/>
     <comment/>
     <exportmacro/>
-    <class>CPULayout</class>
-    <widget class="QWidget" name="CPULayout">
+    <class>CPUDisplay</class>
+    <widget class="QWidget" name="CPUDisplay">
         <property name="geometry">
             <rect>
                 <x>0</x>
@@ -14,7 +14,7 @@
             </rect>
         </property>
         <property name="windowTitle">
-            <string>CPULayout</string>
+            <string>CPUDisplay</string>
         </property>
     </widget>
     <pixmapfunction/>

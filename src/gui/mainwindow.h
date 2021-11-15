@@ -6,7 +6,7 @@
 #define RS_MONITOR_MAINWINDOW_H
 
 #include <QWidget>
-
+#include "cpudisplay.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -22,6 +22,7 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    CPUDisplay *cpuD;
 };
 
 
