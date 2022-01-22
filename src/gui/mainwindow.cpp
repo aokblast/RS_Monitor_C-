@@ -8,12 +8,16 @@
 #include "ui_mainwindow.h"
 
 MainWindow::MainWindow(QWidget *parent) :
-        QWidget(parent), ui(new Ui::MainWindow), cpuD(new CPUDisplay(this)), ramD(new RamDisplay(this)) {
+        QWidget(parent), ui(new Ui::MainWindow) {
     ui->setupUi(this);
-    ui->cpuFrame->setLayout(cpuD->getLayout());
+    cpuD = new CPUDisplay(ui->cpuFrame);
+    ramD = new RamDisplay(ui->ramFrame);
+    diskD = new DiskDisplay(ui->diskFrame);
 }
 
 MainWindow::~MainWindow() {
     delete cpuD;
+    delete ramD;
+    delete diskD;
     delete ui;
 }
