@@ -19,9 +19,10 @@ CPUDisplay::CPUDisplay(QWidget *parent) :
     int id = 0;
     auto &cores = cpuObj->getCpu().getCores();
     int sq = sqrt(cores.size());
-    for(auto &core : cpuObj->getCpu().getCores()){
+
+    for(auto &core : cores)
         layout->addWidget(new CpuComponent(core, id++), id / sq, id % sq);
-    }
+
 }
 
 QLayout *CPUDisplay::getLayout() {
